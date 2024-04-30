@@ -1,0 +1,41 @@
+//Dados de entrada
+
+//Conjuntos
+H = {1, 2, 3, 4}; //conjunto de nos que representam as casas das criancas
+HH = {0, 1, 2, 3, 4}; //uniao do conjunto H com o no que corresponde a escola (n = 0) 
+I = {6, 7, 9}; //conjunto de idade das criancas
+
+//Parametros
+dij = [
+    [0, 0.1, 0.1, 0.2, 0.1],   
+    [0.1, 0, 0.2, 0.3, 0.1],  
+    [0.1, 0.2, 0, 0.1, 0.2],  
+    [0.2, 0.3, 0.1, 0, 0.1], 
+    [0.1, 0.1, 0.2, 0.1, 0]
+]; //coeficiente que representa a qualidade do caminho (quanto maior seu valor, pior o caminho). Obs: Varia de 0.1 a 0.3
+
+qki = [
+	 [3, 2, 1, 3],
+	 [2, 3, 0, 1],
+	 [1, 3, 0, 2] 
+];//quantidade de criancas de idade k que moram na Origem
+
+pk = [2, 1.5, 1]; //nivel de atencao que uma crianca de idade k exige de um monitor (quanto mais nova uma crianca, maior seu valor). Obs: Varia de 1 a 2
+
+p = 5; //numero maximo de criancas que um monitor consegue supervisionar
+
+Si = [20, 34, 35, 18]; //distancia direta entre a escola e a Origem
+
+Siii = [2, 1.4, 1.7, 2]; //porcentagem adicional que as criancas da Origem podem caminhar. Varia de 1 a 2
+ 
+cij = [
+    [0, 20, 34, 35, 18], 
+    [20, 0, 30, 40, 33], 
+    [34, 30, 0, 18, 27], 
+    [35, 40, 18, 0, 19],
+    [18, 33, 27, 19, 0] 
+]; //distancia da Origem ate a Chegada 
+
+alpha = 0.01; // representa o peso da seguranca do trajeto
+
+M = 21;//somatorio de qki; //e um numero suficientemente grande.
